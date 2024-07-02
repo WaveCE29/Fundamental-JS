@@ -1,7 +1,2 @@
-console.log('Hello World!');
-var x = 20; 
-{
-    var x = 100;
-    let y = 15;
-}
-console.log(x); // 100
+me = prompt("Hello World! This is my first JavaScript code in a website.")
+console.log("Hello " + me)
