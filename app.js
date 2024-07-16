@@ -1,8 +1,14 @@
-let lotto_number = prompt("Enter your lotto number :");
-let random_number = Math.floor(Math.random() * 1000)
-document.getElementById("random").innerHTML = random_number;
-if (lotto_number == random_number) {
-  document.getElementById("result").innerHTML = "You win!";
-}else{
-  document.getElementById("result").innerHTML = "You lose!";
+let score = prompt("Enter your score: ");
+if (score >= 80) {
+  document.getElementById("result").innerHTML = "Your Grade is A";
+} else if (score >= 70) {
+  document.getElementById("result").innerHTML = "Your Grade is B";
+} else if (score >= 60) {
+  document.getElementById("result").innerHTML = "Your Grade is C";
+} else if (score >= 50) {
+  document.getElementById("result").innerHTML = "Your Grade is D";
+} else {
+  document.getElementById("result").innerHTML = "Your Grade is F";      
+
 }
+
