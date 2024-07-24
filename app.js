@@ -1,14 +1,9 @@
-let score = prompt("Enter your score: ");
-if (score >= 80) {
-  document.getElementById("result").innerHTML = "Your Grade is A";
-} else if (score >= 70) {
-  document.getElementById("result").innerHTML = "Your Grade is B";
-} else if (score >= 60) {
-  document.getElementById("result").innerHTML = "Your Grade is C";
-} else if (score >= 50) {
-  document.getElementById("result").innerHTML = "Your Grade is D";
-} else {
-  document.getElementById("result").innerHTML = "Your Grade is F";      
-
+let qrt = prompt("Enter number of products");
+var sum = 0;
+for (var i = 1; i <= qrt; i++) {
+  let item_price = prompt("Enter price of item " + i);
+  document.getElementById("price_list").innerHTML +=
+    "Number of item " + i + ": " + item_price + " baht" + "<br>";
+  sum += parseInt(item_price);
 }
-
+document.getElementById("result").innerHTML = "Total price: " + sum + " baht";
