@@ -1,9 +1,15 @@
-let qrt = prompt("Enter number of products");
-var sum = 0;
-for (var i = 1; i <= qrt; i++) {
-  let item_price = prompt("Enter price of item " + i);
-  document.getElementById("price_list").innerHTML +=
-    "Number of item " + i + ": " + item_price + " baht" + "<br>";
-  sum += parseInt(item_price);
+let round = prompt("Enter the round number: ");
+for (var i = 0; i < round; i++) {
+  var answer = prompt("Head or Tail: ");
+  var random_answer = "";
+  if (Math.floor(Math.random() * 10) <= 4) {
+    random_answer = "Head";
+  } else {
+    random_answer = "Tail";
+  }
+  if (answer == random_answer) {
+    console.log("You win!");
+  } else {
+    console.log("You lose!");
+  }
 }
-document.getElementById("result").innerHTML = "Total price: " + sum + " baht";
