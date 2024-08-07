@@ -1,15 +1,14 @@
-let round = prompt("Enter the round number: ");
-for (var i = 0; i < round; i++) {
-  var answer = prompt("Head or Tail: ");
-  var random_answer = "";
-  if (Math.floor(Math.random() * 10) <= 4) {
-    random_answer = "Head";
-  } else {
-    random_answer = "Tail";
-  }
-  if (answer == random_answer) {
-    console.log("You win!");
-  } else {
-    console.log("You lose!");
-  }
+function toCelcius() {
+  let fahrenheit = prompt("Enter the temperature in Fahrenheit: ");
+  let value = ((fahrenheit - 32) * 5) / 9;
+  document.getElementById("result").innerHTML = value.toFixed(2) + "°C";
 }
+
+
+function toFahrenheit() {
+  let celsius = prompt("Enter the temperature in Celsius: ");
+  let value = (celsius * 9) / 5 + 32;
+  document.getElementById("result").innerHTML = value.toFixed(2) + "°F";
+}
+toCelcius();
+toFahrenheit();
