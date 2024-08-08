@@ -1,14 +1,21 @@
-function toCelcius() {
-  let fahrenheit = prompt("Enter the temperature in Fahrenheit: ");
-  let value = ((fahrenheit - 32) * 5) / 9;
-  document.getElementById("result").innerHTML = value.toFixed(2) + "°C";
+function toCelsius(fahrenheit) {
+  let result = (5/9) * (fahrenheit-32);
+  return result.toFixed(2);
 }
 
-
-function toFahrenheit() {
-  let celsius = prompt("Enter the temperature in Celsius: ");
-  let value = (celsius * 9) / 5 + 32;
-  document.getElementById("result").innerHTML = value.toFixed(2) + "°F";
+function toFahrenheit(celsius) {
+  let result = (celsius * 9/5) + 32;
+  return result.toFixed(2);
 }
-toCelcius();
-toFahrenheit();
+
+function display(elementID, value) {
+  document.getElementById(elementID).innerHTML = "<b>"+value+"</b>";
+}
+
+function toCelsiusProgram(value){
+  alert(toCelsius(value));
+}
+
+function toFahrenheitProgram(value) {
+  alert(toFahrenheit(value));
+}
